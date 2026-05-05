@@ -1,4 +1,329 @@
 <!DOCTYPE html>
-<html><head><title>Privacy Policy</title></head>
-<body><h1>Privacy Policy</h1><p>This app does not collect personal data.</p></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — 1% Club</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0A0A0A;
+      --surface:   #111111;
+      --border:    #1E1E1E;
+      --gold:      #C9A227;
+      --gold-light:#E8C04A;
+      --white:     #F5F5F5;
+      --muted:     #888888;
+      --text:      #CCCCCC;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+
+    .crown {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 12px rgba(201,162,39,0.4));
+    }
+
+    header h1 {
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    header p.subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── Summary cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 56px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 18px;
+    }
+
+    .card .icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 44px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      color: var(--text);
+      padding: 8px 0 8px 26px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .contact-block a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-block a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    footer span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    @media (max-width: 480px) {
+      .summary-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="crown">👑</span>
+  <h1>1% CLUB — Privacy Policy</h1>
+  <p class="subtitle">Last updated: May 2026</p>
+</header>
+
+<main>
+
+  <!-- Summary cards -->
+  <div class="summary-grid">
+    <div class="card">
+      <span class="icon">🔒</span>
+      <strong>No Data Collected</strong>
+      <span>Zero personal information gathered</span>
+    </div>
+    <div class="card">
+      <span class="icon">📱</span>
+      <strong>Local Storage Only</strong>
+      <span>All data stays on your device</span>
+    </div>
+    <div class="card">
+      <span class="icon">🚫</span>
+      <strong>No Tracking</strong>
+      <span>No analytics or third-party SDKs</span>
+    </div>
+    <div class="card">
+      <span class="icon">🍎</span>
+      <strong>Apple IAP</strong>
+      <span>Purchases handled by Apple</span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section>
+    <h2>Overview</h2>
+    <p>
+      <strong style="color: var(--white);">1% Club — Luxury Widget</strong> is a simple iOS widget app
+      that displays your net worth on your home screen. We are committed to your privacy.
+      This policy explains what information the app handles and how.
+    </p>
+    <p>
+      The short version: <strong style="color: var(--white);">we collect nothing.</strong>
+      No accounts, no sign-ups, no servers.
+    </p>
+  </section>
+
+  <!-- Data we don't collect -->
+  <section>
+    <h2>What We Don't Collect</h2>
+    <ul>
+      <li>No name, email address, or personal identifiers</li>
+      <li>No location data</li>
+      <li>No device identifiers or advertising IDs</li>
+      <li>No usage analytics or crash reports sent to us</li>
+      <li>No browsing history or behavioral data</li>
+      <li>No financial account data</li>
+    </ul>
+  </section>
+
+  <!-- Local data -->
+  <section>
+    <h2>Data Stored on Your Device</h2>
+    <p>
+      The only information stored by the app is the net worth amount you choose to enter,
+      along with your selected widget theme and purchase status. This data is stored
+      exclusively in <strong style="color: var(--white);">iOS UserDefaults (App Group)</strong>
+      on your local device — it never leaves your device and is never transmitted anywhere.
+    </p>
+    <p>
+      You can delete this data at any time by uninstalling the app.
+    </p>
+  </section>
+
+  <!-- Third parties -->
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>
+      1% Club does not integrate any third-party analytics, advertising, or tracking SDKs.
+      No data is shared with any third party.
+    </p>
+    <p>
+      The app offers a one-time in-app purchase. All payment processing is handled
+      entirely by <strong style="color: var(--white);">Apple</strong> through the
+      App Store. We do not see or store your payment information.
+      Apple's privacy policy applies to purchase transactions:
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener"
+         style="color: var(--gold); text-decoration: none; font-weight: 600;">
+        apple.com/legal/privacy
+      </a>
+    </p>
+  </section>
+
+  <!-- Children -->
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>
+      1% Club does not collect any personal information from anyone, including
+      children under the age of 13. The app is not directed at children.
+    </p>
+  </section>
+
+  <!-- Changes -->
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>
+      If this privacy policy is updated, the new version will be posted at this URL
+      with an updated date. Continued use of the app after changes constitutes
+      acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <p>
+        Questions about this privacy policy? Contact the developer:
+        <br /><br />
+        <strong style="color: var(--white);">Support</strong><br />
+        <a href="mailto:support@tubementor.xyz">support@tubementor.xyz</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>1% Club — Luxury Widget</span> &nbsp;·&nbsp; © 1% Club &nbsp;·&nbsp; All rights reserved
+</footer>
+
+</body>
 </html>
