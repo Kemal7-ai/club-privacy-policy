@@ -3,171 +3,309 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for 1% Club — Luxury Widget iOS app by Tubementor." />
   <title>Privacy Policy — 1% Club</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0A0A0A;
-      --surface:   #111111;
-      --border:    #1E1E1E;
-      --gold:      #C9A227;
-      --gold-light:#E8C04A;
-      --white:     #F5F5F5;
-      --muted:     #888888;
-      --text:      #CCCCCC;
+      --bg:         #0A0A0A;
+      --surface:    #111111;
+      --surface-2:  #161616;
+      --border:     #1E1E1E;
+      --gold:       #C9A227;
+      --gold-light: #E8C04A;
+      --gold-dim:   rgba(201,162,39,0.12);
+      --white:      #F0F0F0;
+      --body:       #BBBBBB;
+      --muted:      #777777;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
+      color: var(--body);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+                   Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .topbar .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .topbar span {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
     }
 
     /* ── Header ── */
     header {
-      border-bottom: 1px solid var(--border);
-      padding: 60px 24px 48px;
+      padding: 64px 24px 52px;
       text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
     }
-
-    .crown {
-      font-size: 40px;
-      display: block;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 12px rgba(201,162,39,0.4));
+    header::before {
+      content: "";
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 300px;
+      background: radial-gradient(ellipse, rgba(201,162,39,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
-
+    .crown-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.25);
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
     header h1 {
-      font-size: clamp(26px, 5vw, 36px);
+      font-size: clamp(28px, 5vw, 40px);
       font-weight: 800;
-      letter-spacing: 0.04em;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      letter-spacing: 0.03em;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
-
-    header p.subtitle {
+    header p {
       color: var(--muted);
-      font-size: 14px;
-      letter-spacing: 0.02em;
+      font-size: 13px;
+      letter-spacing: 0.03em;
     }
+    header p strong { color: var(--body); font-weight: 600; }
 
-    /* ── Layout ── */
-    main {
-      max-width: 740px;
+    /* ── Quick summary pills ── */
+    .pills-wrap {
+      max-width: 780px;
       margin: 0 auto;
-      padding: 56px 24px 80px;
+      padding: 40px 24px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 13px;
+      color: var(--body);
+      font-weight: 500;
+    }
+    .pill .check { color: var(--gold); font-weight: 700; }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
     }
 
-    /* ── Summary cards ── */
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      margin-bottom: 56px;
-    }
-
-    .card {
+    /* ── Table of contents ── */
+    .toc {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 20px 18px;
+      padding: 24px 28px;
+      margin-bottom: 52px;
     }
-
-    .card .icon {
-      font-size: 22px;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .card strong {
-      display: block;
-      color: var(--white);
-      font-size: 14px;
+    .toc h3 {
+      font-size: 11px;
       font-weight: 700;
-      margin-bottom: 4px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
     }
-
-    .card span {
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+    .toc ol li { counter-increment: toc; }
+    .toc ol li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--body);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .toc ol li a:hover { color: var(--gold); }
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
     }
 
     /* ── Sections ── */
-    section {
-      margin-bottom: 44px;
-    }
+    section { margin-bottom: 48px; }
 
     section h2 {
-      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
+      color: var(--gold);
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    section h2 .num {
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.2);
+      color: var(--gold);
+      font-size: 11px;
+      border-radius: 6px;
+      padding: 2px 7px;
+      font-weight: 800;
     }
 
-    section p {
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
+    section p { margin-bottom: 14px; color: var(--body); }
     section p:last-child { margin-bottom: 0; }
+    section strong { color: var(--white); font-weight: 600; }
 
-    ul {
+    /* ── Check list ── */
+    ul.checklist {
       list-style: none;
-      padding: 0;
-      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
     }
-
-    ul li {
-      color: var(--text);
-      padding: 8px 0 8px 26px;
-      position: relative;
+    ul.checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 18px;
       border-bottom: 1px solid var(--border);
-      font-size: 15px;
+      font-size: 14px;
+      color: var(--body);
     }
-
-    ul li:last-child { border-bottom: none; }
-
-    ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
+    ul.checklist li:last-child { border-bottom: none; }
+    ul.checklist li .ck {
       color: var(--gold);
       font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Info box ── */
+    .infobox {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-size: 14px;
+      color: var(--body);
+      margin-top: 16px;
+    }
+    .infobox strong { color: var(--white); }
+
+    /* ── Compliance grid ── */
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .comp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 18px;
+    }
+    .comp-card .badge {
+      display: inline-block;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.25);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      border-radius: 6px;
+      padding: 3px 8px;
+      margin-bottom: 10px;
+    }
+    .comp-card p {
+      font-size: 13px;
+      color: var(--body);
+      margin: 0;
     }
 
     /* ── Contact block ── */
     .contact-block {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .contact-icon {
+      width: 48px; height: 48px;
       border-radius: 12px;
-      padding: 20px 22px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
     }
-
-    .contact-block p {
-      margin: 0;
+    .contact-block h3 {
       font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
     }
-
+    .contact-block p { font-size: 14px; margin-bottom: 6px; }
     .contact-block a {
       color: var(--gold);
       text-decoration: none;
       font-weight: 600;
     }
-
     .contact-block a:hover {
       color: var(--gold-light);
       text-decoration: underline;
@@ -175,147 +313,252 @@
 
     /* ── Footer ── */
     footer {
-      text-align: center;
-      padding: 32px 24px;
       border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
       color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.02em;
+      font-size: 12px;
+      letter-spacing: 0.03em;
     }
+    footer span { color: var(--gold); font-weight: 600; }
 
-    footer span {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    @media (max-width: 480px) {
-      .summary-grid { grid-template-columns: 1fr 1fr; }
+    /* ── Responsive ── */
+    @media (max-width: 560px) {
+      .toc ol { grid-template-columns: 1fr; }
+      .contact-block { flex-direction: column; gap: 14px; }
     }
   </style>
 </head>
 <body>
 
+<!-- Top bar -->
+<div class="topbar">
+  <div class="dot"></div>
+  <span>Privacy Policy</span>
+</div>
+
+<!-- Header -->
 <header>
-  <span class="crown">👑</span>
-  <h1>1% CLUB — Privacy Policy</h1>
-  <p class="subtitle">Last updated: May 2026</p>
+  <div class="crown-wrap">👑</div>
+  <h1>1% Club — Luxury Widget</h1>
+  <p>
+    <strong>Effective date: May 5, 2026</strong>
+    &nbsp;·&nbsp; Developed by <strong>Tubementor</strong>
+    &nbsp;·&nbsp; iOS App Store
+  </p>
 </header>
+
+<!-- Quick pills -->
+<div class="pills-wrap">
+  <div class="pill"><span class="check">✓</span> No data collected</div>
+  <div class="pill"><span class="check">✓</span> No account required</div>
+  <div class="pill"><span class="check">✓</span> No tracking or analytics</div>
+  <div class="pill"><span class="check">✓</span> Local storage only</div>
+  <div class="pill"><span class="check">✓</span> No third-party sharing</div>
+  <div class="pill"><span class="check">✓</span> Apple-processed payments</div>
+</div>
 
 <main>
 
-  <!-- Summary cards -->
-  <div class="summary-grid">
-    <div class="card">
-      <span class="icon">🔒</span>
-      <strong>No Data Collected</strong>
-      <span>Zero personal information gathered</span>
-    </div>
-    <div class="card">
-      <span class="icon">📱</span>
-      <strong>Local Storage Only</strong>
-      <span>All data stays on your device</span>
-    </div>
-    <div class="card">
-      <span class="icon">🚫</span>
-      <strong>No Tracking</strong>
-      <span>No analytics or third-party SDKs</span>
-    </div>
-    <div class="card">
-      <span class="icon">🍎</span>
-      <strong>Apple IAP</strong>
-      <span>Purchases handled by Apple</span>
-    </div>
+  <!-- Table of contents -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#local-storage">Local Storage</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#purchases">In-App Purchases</a></li>
+      <li><a href="#compliance">GDPR / CCPA / COPPA</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
   </div>
 
-  <!-- Overview -->
-  <section>
-    <h2>Overview</h2>
+  <!-- 1. Overview -->
+  <section id="overview">
+    <h2><span class="num">01</span> Overview</h2>
     <p>
-      <strong style="color: var(--white);">1% Club — Luxury Widget</strong> is a simple iOS widget app
-      that displays your net worth on your home screen. We are committed to your privacy.
-      This policy explains what information the app handles and how.
+      This Privacy Policy describes how <strong>Tubementor</strong> ("we", "us", or "our")
+      handles information in connection with the <strong>1% Club — Luxury Widget</strong>
+      iOS application ("the App"), available on the Apple App Store.
     </p>
     <p>
-      The short version: <strong style="color: var(--white);">we collect nothing.</strong>
-      No accounts, no sign-ups, no servers.
+      Our privacy practice is simple: <strong>we do not collect, transmit, or store
+      any personal data on external servers.</strong> The App functions entirely on your
+      device and has no backend, no user accounts, and no cloud synchronization.
+    </p>
+    <p>
+      By using the App you acknowledge this Privacy Policy. If you do not agree,
+      please discontinue use and uninstall the App.
     </p>
   </section>
 
-  <!-- Data we don't collect -->
-  <section>
-    <h2>What We Don't Collect</h2>
-    <ul>
-      <li>No name, email address, or personal identifiers</li>
-      <li>No location data</li>
-      <li>No device identifiers or advertising IDs</li>
-      <li>No usage analytics or crash reports sent to us</li>
-      <li>No browsing history or behavioral data</li>
-      <li>No financial account data</li>
+  <!-- 2. Data collected -->
+  <section id="data-collected">
+    <h2><span class="num">02</span> Data We Collect</h2>
+    <p>
+      <strong>We collect no personal information whatsoever.</strong> The following
+      data types are explicitly not collected:
+    </p>
+    <ul class="checklist">
+      <li><span class="ck">✗</span> Name, email address, or any personal identifier</li>
+      <li><span class="ck">✗</span> Location or GPS data</li>
+      <li><span class="ck">✗</span> Device identifiers, IDFA, or advertising IDs</li>
+      <li><span class="ck">✗</span> IP address or network information</li>
+      <li><span class="ck">✗</span> Usage analytics, session data, or crash reports</li>
+      <li><span class="ck">✗</span> Financial account information of any kind</li>
+      <li><span class="ck">✗</span> Browsing history or behavioral data</li>
+      <li><span class="ck">✗</span> Contacts, photos, camera, or microphone data</li>
     </ul>
+    <div class="infobox">
+      <strong>Developer access:</strong> We have zero access to any data entered into the App.
+      Your net worth figure and preferences never leave your device.
+    </div>
   </section>
 
-  <!-- Local data -->
-  <section>
-    <h2>Data Stored on Your Device</h2>
+  <!-- 3. Local storage -->
+  <section id="local-storage">
+    <h2><span class="num">03</span> Local Storage</h2>
     <p>
-      The only information stored by the app is the net worth amount you choose to enter,
-      along with your selected widget theme and purchase status. This data is stored
-      exclusively in <strong style="color: var(--white);">iOS UserDefaults (App Group)</strong>
-      on your local device — it never leaves your device and is never transmitted anywhere.
+      The App stores the following information <strong>locally on your device only</strong>,
+      using iOS UserDefaults (App Group shared container for widget functionality):
     </p>
-    <p>
-      You can delete this data at any time by uninstalling the app.
+    <ul class="checklist">
+      <li><span class="ck">✓</span> The net worth amount you choose to enter</li>
+      <li><span class="ck">✓</span> Your selected widget color theme</li>
+      <li><span class="ck">✓</span> Whether an in-app purchase has been completed</li>
+    </ul>
+    <p style="margin-top: 16px;">
+      This data exists solely on your device and is used only to display your widget
+      and remember your preferences between sessions. It is never transmitted to any
+      server, cloud service, or third party. You can permanently delete all App data
+      by uninstalling the App from your device.
     </p>
   </section>
 
-  <!-- Third parties -->
-  <section>
-    <h2>Third-Party Services</h2>
+  <!-- 4. Third parties -->
+  <section id="third-parties">
+    <h2><span class="num">04</span> Third-Party Services</h2>
     <p>
-      1% Club does not integrate any third-party analytics, advertising, or tracking SDKs.
-      No data is shared with any third party.
+      <strong>The App contains no third-party SDKs, analytics libraries, advertising
+      networks, or tracking frameworks.</strong> We do not use services such as
+      Firebase, Google Analytics, Facebook SDK, Mixpanel, Amplitude, Sentry, or
+      any equivalent tool.
     </p>
     <p>
-      The app offers a one-time in-app purchase. All payment processing is handled
-      entirely by <strong style="color: var(--white);">Apple</strong> through the
-      App Store. We do not see or store your payment information.
-      Apple's privacy policy applies to purchase transactions:
-      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener"
-         style="color: var(--gold); text-decoration: none; font-weight: 600;">
+      No data — personal or otherwise — is shared with, sold to, or disclosed to
+      any third party under any circumstances.
+    </p>
+  </section>
+
+  <!-- 5. Purchases -->
+  <section id="purchases">
+    <h2><span class="num">05</span> In-App Purchases</h2>
+    <p>
+      The App offers a one-time in-app purchase to unlock premium widget themes.
+      All payment processing is handled exclusively by <strong>Apple</strong>
+      through the iOS App Store infrastructure. We do not receive, process, or
+      store any payment card data, billing information, or transaction details.
+    </p>
+    <p>
+      Apple's handling of purchase data is governed by Apple's own Privacy Policy:
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">
         apple.com/legal/privacy
       </a>
     </p>
   </section>
 
-  <!-- Children -->
-  <section>
-    <h2>Children's Privacy</h2>
+  <!-- 6. Compliance -->
+  <section id="compliance">
+    <h2><span class="num">06</span> GDPR / CCPA / COPPA Compliance</h2>
+    <div class="compliance-grid">
+      <div class="comp-card">
+        <div class="badge">GDPR</div>
+        <p>
+          The App does not collect, process, or store any personal data as defined
+          by the EU General Data Protection Regulation (GDPR). Because no personal
+          data is processed, no GDPR obligations apply. Users in the EU/EEA have
+          no data to access, correct, or delete, as none is held.
+        </p>
+      </div>
+      <div class="comp-card">
+        <div class="badge">CCPA</div>
+        <p>
+          We do not sell, share, or disclose personal information of California
+          residents as defined by the California Consumer Privacy Act (CCPA).
+          No personal information is collected, so there is nothing to sell,
+          disclose, or opt out of.
+        </p>
+      </div>
+      <div class="comp-card">
+        <div class="badge">COPPA</div>
+        <p>
+          The App is not directed at children under the age of 13 and we do not
+          knowingly collect personal information from children. If you believe a
+          child has provided information through the App, please contact us
+          immediately.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Children -->
+  <section id="children">
+    <h2><span class="num">07</span> Children's Privacy</h2>
     <p>
-      1% Club does not collect any personal information from anyone, including
-      children under the age of 13. The app is not directed at children.
+      The App is intended for general audiences and is not specifically directed at
+      children under 13 years of age. In compliance with the Children's Online
+      Privacy Protection Act (COPPA) and equivalent international regulations, we
+      do not knowingly collect any personal information from children. Since the App
+      collects no personal information from any user, this policy applies equally
+      to all age groups.
     </p>
   </section>
 
-  <!-- Changes -->
-  <section>
-    <h2>Changes to This Policy</h2>
+  <!-- 8. Changes -->
+  <section id="changes">
+    <h2><span class="num">08</span> Changes to This Policy</h2>
     <p>
-      If this privacy policy is updated, the new version will be posted at this URL
-      with an updated date. Continued use of the app after changes constitutes
-      acceptance of the updated policy.
+      We may update this Privacy Policy from time to time. When we do, the updated
+      policy will be published at this URL with a revised effective date. Significant
+      changes may also be noted in the App Store release notes accompanying an app
+      update.
+    </p>
+    <p>
+      Your continued use of the App after any changes to this policy constitutes
+      your acceptance of the updated terms. We encourage you to review this page
+      periodically.
     </p>
   </section>
 
-  <!-- Contact -->
-  <section>
-    <h2>Contact</h2>
+  <!-- 9. Governing law -->
+  <section id="governing-law">
+    <h2><span class="num">09</span> Governing Law</h2>
+    <p>
+      This Privacy Policy is governed by and construed in accordance with the laws
+      of the <strong>Republic of Turkey</strong>, without regard to its conflict of
+      law principles. Any disputes arising in connection with this policy shall be
+      subject to the exclusive jurisdiction of the courts of Turkey.
+    </p>
+  </section>
+
+  <!-- 10. Contact -->
+  <section id="contact">
+    <h2><span class="num">10</span> Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy
+      or the App's data practices, please reach out:
+    </p>
     <div class="contact-block">
-      <p>
-        Questions about this privacy policy? Contact the developer:
-        <br /><br />
-        <strong style="color: var(--white);">Support</strong><br />
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h3>Tubementor — Support</h3>
+        <p>We aim to respond to all inquiries within 48 hours.</p>
         <a href="mailto:support@tubementor.xyz">support@tubementor.xyz</a>
-      </p>
+      </div>
     </div>
   </section>
 
@@ -323,6 +566,8 @@
 
 <footer>
   <span>1% Club — Luxury Widget</span> &nbsp;·&nbsp; © 1% Club &nbsp;·&nbsp; All rights reserved
+  <br /><br />
+  Effective: May 5, 2026
 </footer>
 
 </body>
